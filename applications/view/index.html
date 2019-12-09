@@ -16,71 +16,13 @@
 </head>
 
 <body ng-app=app>
-  <div ng-controller="actorController">
-
-    <div>
-      <a ng-href="../view/lang.html">Dynamic link</a>
-      <br />
-    </div>
-
-  <form>
-    <div class="form-group row">
-      <label class="col-sm-1 col-form-label">ID</label>
-      <div class="col-sm-3">
-        <input class="form-control" data-ng-model="newActor.actorId" type="text" class="form-control" ng-readonly="true" type="text">
-      </div>
-    </div>
-    <div class="form-group row">
-      <label class="col-sm-1 col-form-label">First Name</label>
-      <div class="col-sm-3">
-        <input class="form-control" data-ng-model="newActor.firstName"class="form-control" ng-readonly="readOnly" type="text">
-      </div>
-    </div>
-    <div class="form-group row">
-      <label class="col-sm-1 col-form-label">Last Name</label>
-      <div class="col-sm-3">
-        <input class="form-control" data-ng-model="newActor.lastName" class="form-control" ng-readonly="readOnly" type="text">
-      </div>
-    </div>
-    <div class="form-group row">
-      <label class="col-sm-1 col-form-label">Last Update</label>
-      <div class="col-sm-3">
-        <input class="form-control" data-ng-model="newActor.lastUpdate" class="form-control" ng-readonly="true" type="text">
-      </div>
-    </div>
-    
-    <div class="form-group row">
-      <div class="col-sm-10">
-        <button type="button" data-ng-click="addBtn()" class="btn btn-info">Add</button>
-        <button type="button" data-ng-click="saveInsertActor(isClicked)" ng-show="addIsClicked" class="btn btn-link">Yes</button>
-        <button type="button" data-ng-click="cancelInsertActor(isClicked)" ng-show="addIsClicked" class="btn btn-light">No</button>
-        <button type="button" data-ng-click="saveEditActor(isClicked)" ng-show="editIsClicked" class="btn btn-success">Save</button>
-        <button type="button" data-ng-click="cancelEditActor(isClicked)" ng-show="editIsClicked" class="btn btn-warning">Cancel</button>
-      </div>
-    </div>
-</form>
-
-    <table class="table table-sm table-dark">
-      <tr>
-        <th>ID</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Last Update</th>
-        <th>Action</th>
-      </tr>
-
-      <tr ng-repeat="u in actors">
-        <td>{{u.actorId}}</td>
-        <td>{{u.firstName}}</td>
-        <td>{{u.lastName}}</td>
-        <td>{{u.lastUpdate | date: 'dd-MM-yyyy'}}</td>
-        <td>
-            <button type="button" data-ng-click="editActor(u.actorId)" class="btn btn-primary">Edit</button> 
-            <button type="button" data-ng-click="removeActor(u.actorId)" class="btn btn-danger">Delete</button>
-        </td>
-      </tr>
-    </table>
-
+  <div align="center">
+    <form>
+        <div class="col-sm-10">
+            <a class="btn btn-danger" ng-href="../view/actor.html">Actor</a>
+            <a class="btn btn-danger" ng-href="../view/lang.html">Language</a>
+        </div>
+    </form>
   </div>
 </body>
 
