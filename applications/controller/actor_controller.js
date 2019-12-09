@@ -5,11 +5,11 @@ app.controller('actorController', function ($scope, actorFactory) {
         lastName: " "
     }
 
-    $scope.addIsClicked = false;
-    $scope.editIsClicked = false;
-    $scope.readOnly = true;
-    var editClicked = false;
-    var addClicked = false;
+    // $scope.addIsClicked = false;
+    // $scope.editIsClicked = false;
+    // $scope.readOnly = true;
+    // var editClicked = false;
+    // var addClicked = false;
 
     getList();
 
